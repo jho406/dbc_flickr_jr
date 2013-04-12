@@ -18,12 +18,17 @@
   <title></title>
 </head>
 <nav>
-
-  <form method="post" enctype='multipart/form-data'>
-    <input type='file' name='photo[file]'>
-    <button type="submit" class="button">Upload!</button>
-  </form>
-
+  <div id="top_nav">
+    <div id="left_nav"><a class="button"href="<%= url("/")%>">Home</a></div>
+    <div id="right_nav">
+      <% unless logged_in? %>
+        <a href="<%= url("/users/new")%>">Sign up!</a>
+      <% else %>
+        <a href="<%= url("/albums/new")%>">New Photo Album</a> ||
+        <a href="<%= url("/users/#{current_user.id}/albums")%>">My Albums</a> 
+      <% end %>
+    </div>
+  </div>
 </nav>
 <body>
   <%= yield %>

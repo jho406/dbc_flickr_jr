@@ -1,0 +1,7 @@
+<%photos.each do |photo|%>
+  <a href="<%=base_url%>/<%=photo.id%>" >
+    <div class= "photo-thumb">
+      <img src="<%= photo.file.thumb.url%>">
+    </div>
+  </a>
+<%end%>

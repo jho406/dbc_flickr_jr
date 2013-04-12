@@ -1,6 +1,6 @@
 <div class="container">
-<h1>uploader</h1>
-
-<div class= "spotlight"><img src="<%=@photo.file.url%>">
-</div>
+  <div class= "spotlight">
+    <h1><%=File.basename(@photo.file.path)%></h1>
+    <img src="<%=@photo.file.url%>">
+  </div>
 </div>

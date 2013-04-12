@@ -4,6 +4,7 @@
 }
 nav{
  background: #34495E;  
+ padding: 20px;
 }
 th {
   text-align: left;
@@ -42,13 +43,46 @@ form textarea{
   height:200px;
 }
 
-.new-user-form{
+.new-user-form, .login-form{
   width: 300px;
   margin: 0 auto;
 }
 
-.new-user-form input{
+.new-user-form, .login-form input{
   width: 300px;
   padding: 10px;
   margin-bottom: 20px;
 }
+.spotlight{
+  width: 500px;
+  margin: 0 auto;
+}
+.new-photo-form {
+  width: 500px;
+  margin: 20px auto;
+}
+.new-photo-form input[type="file"]{
+   margin: 20px 0;
+   background: #F1C40F;
+   width: 600px;
+   height: 300px;
+}
+
+#left_nav{
+  float: left;
+}
+#right_nav{
+  float:right;
+}
+
+
+#right_nav a:link, #right_nav a:visited, #right_nav a:active {
+  text-decoration: none;
+  color: white;
+  /*box-shadow: 1px 2px 5px gray;*/
+} 
+#right_nav a:hover {
+  color: white;
+  background-color:#27AE60;
+}
+

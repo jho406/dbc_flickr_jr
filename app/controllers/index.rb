@@ -7,19 +7,14 @@ post "/" do
   redirect to("/")
 end
 
-get "/photos" do
-  @photos = Photo.all
-  erb :"photo/index" 
-end
-
-get "/photos/:id" do
-  @photo = Photo.find(params[:id])
-  erb :"photo/show"
-end
-
 get "/albums" do
   @photos = Album.all
   erb :"photo/index"
+end
+
+
+get "/albums/new" do
+  erb :"album/new"
 end
 
 get "/albums/:id" do

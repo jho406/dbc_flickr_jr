@@ -1,8 +1,4 @@
 <div class="container">
   <h1>Explore</h1>
-<%@photos.each do |photo|%>
-    <div class= "photo-thumb">
-      <img src="<%= photo.file.thumb.url%>">
-    </div>
-<%end%>
+  <%= erb :"partials/_photos", :locals=>{:photos=>@photos, :base_url=>@base_url}%>
 </div>
